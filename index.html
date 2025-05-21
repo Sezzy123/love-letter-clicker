@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter Clicker 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comfortaa', cursive;
+      background: url('https://images.unsplash.com/photo-1529253355930-b5c6b1001ab8?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(255, 192, 203, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      max-width: 500px;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    #noteDisplay {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    iframe {
+      margin-top: 30px;
+      border: none;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Love Letter Clicker 💘</h1>
+    <button onclick="showNote()">Click for a Love Note</button>
+    <div id="noteDisplay">Click to see something sweet 🥰</div>
+
+    <!-- YouTube Playlist Embed -->
+    <iframe width="300" height="169" 
+      src="https://www.youtube.com/embed/videoseries?list=PLVbDJV6yT_bRCFLNlPZ-D8dSEN7cqHDmh" 
+      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const notes = [
+      "I’m so proud of how hard you work.",
+      "You always make me laugh, even on my worst days.",
+      "You’re more talented than you realize.",
+      "Your food has actual magical powers.",
+      "I feel safest when I’m with you.",
+      "You’re allowed to rest. You’ve earned it.",
+      "I love your laugh. I wish I could bottle it.",
+      "You inspire me every single day.",
+      "It’s okay to feel low sometimes — I’ve got you.",
+      "Your strength is quiet, but it’s powerful.",
+      "You make the world better by just being in it.",
+      "I love how passionate you are about the things you love.",
+      "You’re not alone — not even a little.",
+      "Your hugs fix everything.",
+      "I see how hard you try. And it means the world.",
+      "You are deeply loved — not for what you do, but for who you are.",
+      "Bad days don’t change how incredible you are.",
+      "I’d choose you again and again and again.",
+      "You’re my home.",
+      "I believe in you — always."
+    ];
+
+    let currentIndex = 0;
+
+    function showNote() {
+      const noteDisplay = document.getElementById("noteDisplay");
+      noteDisplay.textContent = notes[currentIndex];
+      currentIndex = (currentIndex + 1) % notes.length;
+    }
+  </script>
+</body>
+</html>
